@@ -1,13 +1,15 @@
-# Ajudante
+# Ajudante 1.1
 
-Ajudante is a Java desktop AI coding assistant for Jergan Studio.
+Ajudante 1.1 is a Java desktop AI coding assistant for Jergan Studio. The application and its agent logic are written in Java.
 
 ## Features
 
 - Java 17 desktop application
+- Java-based AI agent and tool system
 - No Ajudante account or sign-in
 - Open a local project folder
 - AI chat for coding tasks
+- Multi-step Java agent loop
 - Agent-style project tools:
   - list files
   - read files
