@@ -301,11 +301,11 @@ class Agent {
             AIClient.Response r = ai.chat(messages, toolDefinitions());
             if (r.toolCalls().isEmpty()) return r.text();
 
-            messages.add(msg("assistant", r.rawAssistant()));
+            messages.add(msg("assistant", "I am using the requested project tools."));
             for (AIClient.ToolCall tc : r.toolCalls()) {
                 reporter.report("[" + tc.name() + "]\n");
                 String result = execute(tc.name(), tc.arguments());
-                messages.add(msg("tool", result));
+                messages.add(msg("user", "Tool result from " + tc.name() + ":\n" + result));
             }
         }
         return "I stopped after 12 agent steps. The project may need another instruction to continue.";
