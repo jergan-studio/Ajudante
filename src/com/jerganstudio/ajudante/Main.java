@@ -30,7 +30,7 @@ class AjudanteFrame extends JFrame {
     private final JLabel status = new JLabel("Ready");
 
     AjudanteFrame() {
-        super("Ajudante — AI Coding Assistant");
+        super("Ajudante 1.1 — Java AI Coding Assistant");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(1250, 780);
         setLocationRelativeTo(null);
@@ -111,7 +111,7 @@ class AjudanteFrame extends JFrame {
             public void actionPerformed(ActionEvent e) { ask(output, send); }
         });
 
-        chat.append("Ajudante AI\n");
+        chat.append("Ajudante 1.1 — Java AI\n");
         chat.append("Open a project, then tell me what you want to build.\n\n");
     }
 
@@ -285,11 +285,12 @@ class Agent {
 
     String run(String request, Reporter reporter) throws Exception {
         String system = """
-        You are Ajudante, a coding agent inside a local project.
+        You are Ajudante 1.1, a Java-based coding agent inside a local project.
         You help the user build software. You have tools that operate ONLY inside the selected project.
         Do not claim a file was changed unless the tool actually changed it.
         Prefer inspecting existing files before replacing them.
         Work in small, verifiable steps.
+        You are implemented by Java code; use the project tools to inspect and modify files.
         When the user asks you to create an application, create the needed folders and source files.
         Explain what you changed after finishing.
         """;
