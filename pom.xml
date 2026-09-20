@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.jerganstudio</groupId>
   <artifactId>ajudante</artifactId>
-  <version>1.0.0</version>
+  <version>1.1.0</version>
   <properties>
     <maven.compiler.release>17</maven.compiler.release>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
